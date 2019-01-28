@@ -40,7 +40,7 @@ weatherforecast username $ java -jar target/weatherforecast-0.0.1.jar
 If you have problems running the application, you may want to check whether the port 8080 is already in used. 
 
 
-In either case, the application runs at [http://localhost:8080](http://localhost:8080). The endpoint [http://localhost:8080/data](http://localhost:8080/data) is ready to serving requests.
+In either case, the application runs at [http://localhost:8080](http://localhost:8080). The endpoint [http://localhost:8080/data](http://localhost:8080/data) is ready to serve requests.
 
 
 ## Test the API
@@ -81,4 +81,4 @@ The integration tests are contained in the class `EndpointTest`. We mock the `We
 
 I provided a customized exception handling for `RestTemplate` calling _openweathermap_ API in order to throw a custom `CityNotFoundException` exception when _openweathermap_  API returns a 404 when a city is not found.
 
-The class `WeatherForecastExceptionController` annotated with `@ControllerAdvice` handles the exception `CityNotFoundException` by return a message _City not found_ and HTTP Status 404.
+The class `WeatherForecastExceptionController` annotated with `@ControllerAdvice` handles the exception `CityNotFoundException` by returning a message _City not found_ and HTTP Status 404.
